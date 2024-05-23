@@ -1,0 +1,54 @@
+{
+  "name": "eclipse-ai-contract",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**",
+  "main": "''",
+  "directories": {
+    "doc": "doc",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "update:foundry": "foundryup",
+    "install:foundry": "foundryup || curl -L https://foundry.paradigm.xyz | bash",
+    "clean": "forge clean",
+    "build": "forge build --extra-output-files abi",
+    "test": "forge test -vvv",
+    "test:unit": "forge test -vvv --match-contract UnitTest",
+    "test:integration": "forge test --match-contract IntegrationTest",
+    "start:localnet": "anvil -m 'test test test test test test test test test test test junk'",
+    "deploy:localnet": "forge script ./script/deploy/DeployProposal.s.sol -vvvv --broadcast --rpc-url http://127.0.0.1:8545 --private-key ${DEPLOYER_PRIVATE_KEY} --slow",
+    "bootstrap:testnet": "forge script ./script/deploy/BootstrapTestnet.s.sol:BootstrapTestnet --rpc-url $RPC_URL -vvvv",
+    "bootstrap:testnet:broadcast": "forge script ./script/deploy/BootstrapTestnet.s.sol:BootstrapTestnet -vvvv --rpc-url $RPC_URL --broadcast --private-key ${DEPLOYER_PRIVATE_KEY} --slow",
+    "ipfs:start:local": "IPFS_PATH=ipfs-data ipfs daemon",
+    "ipfs:install:ubuntu" : "sh script/shell/install_ipfs.sh"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.10",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "3.2.5",
+    "prettier-plugin-solidity": "^1.3.1",
+    "solhint": "^4.5.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@ethersproject/keccak256": "^5.7.0",
+    "axios": "^1.6.8",
+    "commander": "^12.0.0",
+    "ethers": "^5.7.0",
+    "jose": "^5.2.4",
+    "keccak256": "^1.0.6",
+    "lint-staged": "^15.2.2",
+    "soltypes": "^2.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}

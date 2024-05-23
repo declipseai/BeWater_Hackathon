@@ -1,0 +1,11 @@
+source .env && python3 script/python/masterNodeLoop.py
+source .env && python3 script/python/subNodeLoop.py
+source .env && python3 script/python/moduleListener.py
+source .env && python3 script/python/registerNewModel.py
+source .env && python3 script/python/registerNewRequest.py
+
+### for test
+
+source .env && python3 script/python/utils/registerSampleModel.py
+source .env && SUB_PRIVATE_KEY=$SUB1_PRIVATE_KEY python3 script/python/subNodeLoop.py 
+source .env && SUB_PRIVATE_KEY=$SUB2_PRIVATE_KEY python3 script/python/subNodeLoop.py 

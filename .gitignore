@@ -1,0 +1,29 @@
+# Compiler files
+cache/
+out/
+
+# Ignores development broadcast logs
+!/broadcast
+/broadcast/*/31337/
+/broadcast/**/dry-run/
+
+# Docs
+docs/
+
+# Dotenv file
+.env
+
+node_modules/
+venv/
+ipfs-data/
+script/python/.model_cache/quant_resnet50_jit.pth
+script/python/.model_cache/quant_resnet101_jit.pth
+script/python/.model_cache/quant_resnet152_jit.pth
+script/python/.model_cache/resnet50_jit.pth
+script/python/.model_cache/resnet101_jit.pth
+script/python/.model_cache/resnet152_jit.pth
+script/python/utils/__pycache__/eventThread.cpython-310.pyc
+script/python/utils/__pycache__/web3Manager.cpython-310.pyc
+ipfs-download/
+*.pyc
+dataset_img/*
