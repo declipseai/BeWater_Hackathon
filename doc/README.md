@@ -21,8 +21,10 @@ The primary components are as follows:
 The primary components are as follows:
 
 ### Python
-- [MasterNode](ai/MasterNode.md)
-- [SubNode](ai/SubNode.md)
+- [web3Manager](program/web3Manager.md)
+- [ipfsManager](program/ipfsManager.md)
+- [MasterNode](program/masterNodeLoop.md)
+- [SubNode](program/subNodeLoop.md)
 
 ### Foundry
 - [Deploy](contracts/Deploy.md)
