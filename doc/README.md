@@ -1,4 +1,4 @@
-# Eclipse AI Protocol Contracts
+# Eclipse AI Protocol
 
 ## Introduction
 
@@ -20,9 +20,11 @@ The primary components are as follows:
 ## Scripts
 The primary components are as follows:
 
-### Python
+### Utils
 - [web3Manager](program/web3Manager.md)
 - [ipfsManager](program/ipfsManager.md)
+  
+### Nodes
 - [MasterNode](program/masterNodeLoop.md)
 - [SubNode](program/subNodeLoop.md)
 
