@@ -13,12 +13,12 @@ graph TD
     AIModelPlatform --> Counters
     AIModelPlatform --> Model
     AIModelPlatform --> SubNode
-    AIModelPlatform --> MainNode
+    AIModelPlatform --> MasterNode
     AIModelPlatform --> Request
     Request --> IntermediateAnswer
     SubNode --> IntermediateAnswer
     Request --> FinalAnswer
-    MainNode --> FinalAnswer
+    MasterNode --> FinalAnswer
     IntermediateAnswer --> FinalAnswer
 ```
 
